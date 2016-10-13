@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Master>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>@Umbraco.Field("siteTitle")</title>
+		<link rel="stylesheet" href="/Content/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<header>
+			@Umbraco.RenderMacro("MainMenu")
+		</header>
+	
+		<main>
+			@RenderBody()
+		</main>
+	
+		<footer>
+			@Umbraco.Field("footer", recursive: true)
+		</footer>
+		<script src="/Scripts/jquery-3.1.0.min.js"></script>
+		<script src="/Scripts/bootstrap.min.js"></script>
+		<script src="/Scripts/jquery.validate.min.js"></script>
+		<script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+	</body>
+</html>

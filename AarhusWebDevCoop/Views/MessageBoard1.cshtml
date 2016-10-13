@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.MessageBoard>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div class="page-contents">
+<h2>@Umbraco.Field("messageBoardTitle")</h2>
+<p>@Umbraco.Field("messageBoardDescription")</p>
+
+@if (TempData["success"] == null)
+{
+	@Html.Action("Index", "MessageFormSurface")
+}
+else
+{
+	<p>Thanks for commenting!</p>
+}
+
+<div class="comments-list">
+	<h2>Comments:</h2>
+@Umbraco.RenderMacro("CommentsList")
+</div>
+</div>

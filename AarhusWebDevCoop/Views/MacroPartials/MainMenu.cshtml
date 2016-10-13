@@ -1,0 +1,49 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+	var selection = CurrentPage.Site().Children.Where("Visible && DocumentTypeAlias != \"articlesMain\" && DocumentTypeAlias != \"projectMain\"");
+	
+	//var projects = CurrentPage.Site().Children.Where("DocumentTypeAlias  == \"projectMain\"").First().Children();
+	var projects = CurrentPage.Site().Children.Where("DocumentTypeAlias  == \"projectMain\"").First().Children.OrderBy("createDate descending").Take(2); //Display only the 2 newest items
+	var articles = CurrentPage.Site().Children.Where("DocumentTypeAlias  == \"articlesMain\"").First().Children();
+	
+}
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">AWDC</a>
+		</div>
+		<ul class="nav navbar-nav">
+			@foreach(var item in selection){
+				<li>
+					<a href="@item.Url">@item.Name</a>
+				</li>
+			}
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					@foreach(var item in projects){
+						if(@item.itemStatus == "Completed"){ //Vis kun projects der er completed.
+						<li>
+							<a href="@item.Url">@item.Name</a>
+						</li>
+					}
+					}
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					@foreach(var item in articles){
+						<li>
+							<a href="@item.Url">@item.Name</a>
+						</li>
+					}
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+</nav>

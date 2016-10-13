@@ -1,0 +1,210 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Proza+Libre:400,400i,500,500i,600,600i,700,700i,800,800i');
+
+* {
+    box-sizing: border-box;
+    font-family: 'proza libre', sans-serif;
+}
+
+body {
+    display:block;
+    background: #3f3f3f;
+}
+
+main {
+    max-width:1280px;
+    margin: auto;
+    margin-bottom: 16px;
+    padding:32px;
+    min-height: 80vh;
+    background: #fefefe;
+}
+
+
+.navbar {
+    border-radius:0!important;
+    border:0;
+    background:#eee;
+    padding-top:16px;
+}
+
+a.navbar-brand {
+    color:#e03!important; /*To override Bootstrap's stubborn default styling...*/
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+footer {
+    border-top: 1px solid #aaa;
+    padding:16px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align:center;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:800;
+    letter-spacing: -1px;
+}
+h1 {
+    text-align:center;
+    color: #666;
+    padding-bottom:32px;
+}
+
+ul, li {
+    margin:0; padding:0;
+}
+
+.page-contents form {
+   max-width:600px;
+   margin-left:auto; margin-right:auto;
+   padding-top:32px;
+   padding-bottom:32px;
+}
+
+input.form-control {
+    width:100%!important;
+    display:block!important;
+}
+
+.comments-list {
+    max-width:600px;
+    margin-left:auto; margin-right:auto;
+    background:#fff;
+    border:1px solid #eee;
+    padding:8px 32px 16px 32px;
+}
+
+.comments-list li, .main-projects li {
+    list-style:none;
+    padding-bottom:16px;
+    margin-bottom:10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-projects li {
+    border-bottom: none;
+}
+
+.comments-list h3 {
+    font-size:20px;
+}
+
+.comments-list p {
+    font-size:16px;
+}
+
+
+.comments-list .comment-author {
+    font-size: 14px;
+    color:#666;
+    text-transform:uppercase;
+    padding-top:16px;
+}
+
+fieldset.login-form label{
+    width:100px;
+}
+
+fieldset.login-form input{
+    width:300px;
+    display:block;
+    border:0;
+    padding:16px;
+    background:#fff;
+    border:1px solid #eee;
+}
+
+fieldset.login-form button {
+    background: #333;
+    border: 0;
+    color: #fff;
+    padding: 16px 32px;
+}
+
+
+.item-status {
+    text-align:center;
+    color: #32e030;
+    padding:8px;
+    text-transform:uppercase;
+}
+
+.item-img {
+    width:100%;
+    height:auto;
+}
+
+
+.item-text {
+    max-width:768px;
+    margin:auto;
+}
+.item-text.project {
+    max-width:100%;
+}
+
+
+.main-projects {
+
+}
+
+.main-projects img {
+    width:100%;
+}
+
+.main-projects a, .projectLink {
+    display:block;
+    color: #5B95A3;
+    font-weight:800;
+    font-size:18px;
+    text-transform:uppercase;
+    border: 1px #5B95A3 solid;
+    width:100%;
+    text-align:center;
+    margin-top:32px;
+    padding:8px;
+    padding-left:12px;
+
+}
+
+.main-projects-heading {
+    padding:0;
+    padding-top:32px;
+    font-size:18px; text-transform:uppercase;
+}
+
+.container img {
+    max-width:100%;
+    padding-bottom:32px;
+    padding-top:32px;
+}
+
+
+.member {
+    padding-bottom: 32px;
+}
+
+.member-list {
+    list-style:none;
+    max-width:600px;
+    margin:auto;
+}
+
+
+.member-list li {
+    padding-top:4px;
+}
+
+.member img {
+    width:300px;
+    display:block;
+}
+
+.member-list .name{
+    font-weight: 700
+}
+

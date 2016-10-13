@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+
+@{ var selection = CurrentPage.Children.Where("Visible").OrderBy("CreateDate desc"); }
+
+<ul>
+    @foreach (var item in selection)
+    {
+        <li class="comment-list">
+			<article>
+				<p class="comment-author">@item.FullName:</p>
+				<h3>@item.Subject</h3>
+				<p>@item.Body</p>
+			</article>	
+		</li>
+    }
+</ul>
